@@ -2,13 +2,9 @@ package network.ring;
 
 import network.msg.Message;
 import network.msg.MessageQueue;
-
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import org.apache.log4j.Logger;
+
 
 public class Node implements Runnable {
     private Node next;
@@ -62,8 +58,7 @@ public class Node implements Runnable {
     }
 
     private void createLogger() throws IOException {
-        FileInputStream ins = new FileInputStream("/Users/tiger/IdeaProjects/token_ring/logs/ring.log");
-        LogManager.getLogManager().readConfiguration(ins);
-        logger = Logger.getLogger(this.getClass().getName());
+        logger = Logger.getLogger(getClass());
+        logger.info("Logger has started");
     }
 }

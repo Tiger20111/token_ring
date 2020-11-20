@@ -1,0 +1,479 @@
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Logger has started
+Thread.id = 12 has taken message with text: id = 11
+Thread.id = 13 has taken message with text: id = 12
+Thread.id = 14 has taken message with text: id = 13
+Thread.id = 15 has taken message with text: id = 14
+Thread.id = 16 has taken message with text: id = 15
+Thread.id = 17 has taken message with text: id = 16
+Thread.id = 18 has taken message with text: id = 17
+Thread.id = 19 has taken message with text: id = 18
+Thread.id = 20 has taken message with text: id = 19
+Thread.id = 21 has taken message with text: id = 20
+Thread.id = 22 has taken message with text: id = 21
+Thread.id = 23 has taken message with text: id = 22
+Thread.id = 24 has taken message with text: id = 23
+Thread.id = 25 has taken message with text: id = 24
+Thread.id = 26 has taken message with text: id = 25
+Thread.id = 27 has taken message with text: id = 26
+Thread.id = 28 has taken message with text: id = 27
+Thread.id = 29 has taken message with text: id = 28
+Thread.id = 30 has taken message with text: id = 29
+54711620043206: Node.id = 12 time since last message: 52577037
+54711620242199: Node.id = 13 time since last message: 52766314
+54711629377258: Node.id = 14 time since last message: 61811138
+54711645587694: Node.id = 15 time since last message: 78016207
+54711645661829: Node.id = 16 time since last message: 77998458
+54711648517372: Node.id = 17 time since last message: 80803287
+54711664875577: Node.id = 18 time since last message: 97106610
+54711671093504: Node.id = 19 time since last message: 103236275
+54711671161421: Node.id = 20 time since last message: 103259699
+54711675221603: Node.id = 21 time since last message: 107238602
+54711675561158: Node.id = 22 time since last message: 107526484
+54711675605935: Node.id = 23 time since last message: 98040749
+54711675658990: Node.id = 24 time since last message: 97800049
+54711675706797: Node.id = 25 time since last message: 88107457
+54711708025526: Node.id = 26 time since last message: 120098072
+54711708119886: Node.id = 27 time since last message: 110415177
+54711717805956: Node.id = 28 time since last message: 108113423
+54711732780732: Node.id = 29 time since last message: 123047211
+54711732860319: Node.id = 30 time since last message: 123073361
+54711738835217: Node.id = 31 time since last message: 128998999
+54711738890635: Node.id = 32 time since last message: 129005331
+54711738944239: Node.id = 33 time since last message: 129020614
+54711757617968: Node.id = 34 time since last message: 147654737
+54711757932723: Node.id = 35 time since last message: 147931683
+54711758014393: Node.id = 36 time since last message: 147972286
+54711768026385: Node.id = 37 time since last message: 157920910
+54711768088102: Node.id = 38 time since last message: 157913838
+54711768137684: Node.id = 39 time since last message: 154090919
+54711768184760: Node.id = 40 time since last message: 148390082
+54711768240087: Node.id = 41 time since last message: 148301862
+54711773543663: Node.id = 12 time since last message: 206077494
+54711773593177: Node.id = 13 time since last message: 206117292
+54711773634823: Node.id = 14 time since last message: 206068703
+54711777617125: Node.id = 15 time since last message: 210045638
+54711777953921: Node.id = 16 time since last message: 210290550
+54711778018062: Node.id = 17 time since last message: 210303977
+54711778069963: Node.id = 18 time since last message: 210300996
+54711778122848: Node.id = 19 time since last message: 210265619
+54711778184101: Node.id = 20 time since last message: 210282379
+54711778262713: Node.id = 21 time since last message: 210279712
+54711779666455: Node.id = 22 time since last message: 211631781
+54711796086074: Node.id = 23 time since last message: 218520888
+54711799026819: Node.id = 24 time since last message: 221167878
+54711799784014: Node.id = 25 time since last message: 212184674
+54711816072781: Node.id = 26 time since last message: 228145327
+54711816125672: Node.id = 27 time since last message: 218420963
+54711820618931: Node.id = 28 time since last message: 210926398
+54711820656357: Node.id = 29 time since last message: 210922836
+54711820712694: Node.id = 30 time since last message: 210925736
+54711820758456: Node.id = 31 time since last message: 210922238
+54711820799855: Node.id = 32 time since last message: 210914551
+54711820856761: Node.id = 33 time since last message: 210933136
+54711830609619: Node.id = 34 time since last message: 220646388
+54711830809628: Node.id = 35 time since last message: 220808588
+54711831375497: Node.id = 36 time since last message: 221333390
+54711839519175: Node.id = 37 time since last message: 229413700
+54711839587134: Node.id = 38 time since last message: 229412870
+54711842185988: Node.id = 39 time since last message: 228139223
+54711844255950: Node.id = 40 time since last message: 224461272
+54711854682025: Node.id = 41 time since last message: 234743800
+54711854754383: Node.id = 12 time since last message: 287288214
+54711854801368: Node.id = 13 time since last message: 287325483
+54711864995384: Node.id = 14 time since last message: 297429264
+54711865084780: Node.id = 15 time since last message: 297513293
+54711865149767: Node.id = 16 time since last message: 297486396
+54711865209419: Node.id = 17 time since last message: 297495334
+54711875018041: Node.id = 18 time since last message: 307249074
+54711875275019: Node.id = 19 time since last message: 307417790
+54711879799232: Node.id = 20 time since last message: 311897510
+54711886608061: Node.id = 21 time since last message: 318625060
+54711903735217: Node.id = 22 time since last message: 335700543
+54711903819720: Node.id = 23 time since last message: 326254534
+54711903877888: Node.id = 24 time since last message: 326018947
+54711906201276: Node.id = 25 time since last message: 318601936
+54711906265935: Node.id = 26 time since last message: 318338481
+54711922205611: Node.id = 27 time since last message: 324500902
+54711925020180: Node.id = 28 time since last message: 315327647
+54711935016226: Node.id = 29 time since last message: 325282705
+54711935080466: Node.id = 30 time since last message: 325293508
+54711948157841: Node.id = 31 time since last message: 338321623
+54711948204848: Node.id = 32 time since last message: 338319544
+54711948251230: Node.id = 33 time since last message: 338327605
+54711958526784: Node.id = 34 time since last message: 348563553
+54711958598006: Node.id = 35 time since last message: 348596966
+54711958644462: Node.id = 36 time since last message: 348602355
+54711967445429: Node.id = 37 time since last message: 357339954
+54711967490766: Node.id = 38 time since last message: 357316502
+54711970361603: Node.id = 39 time since last message: 356314838
+54711970401278: Node.id = 40 time since last message: 350606600
+54711986053862: Node.id = 41 time since last message: 366115637
+54711986091738: Node.id = 12 time since last message: 418625569
+54712004405772: Node.id = 13 time since last message: 436929887
+54712015421506: Node.id = 14 time since last message: 447855386
+54712015506719: Node.id = 15 time since last message: 447935232
+54712038030776: Node.id = 16 time since last message: 470367405
+54712042369577: Node.id = 17 time since last message: 474655492
+54712052373007: Node.id = 18 time since last message: 484604040
+54712056803538: Node.id = 19 time since last message: 488946309
+54712057829594: Node.id = 20 time since last message: 489927872
+54712067996545: Node.id = 21 time since last message: 500013544
+54712082830950: Node.id = 22 time since last message: 514796276
+54712082906281: Node.id = 23 time since last message: 505341095
+54712082973162: Node.id = 24 time since last message: 505114221
+54712086852267: Node.id = 25 time since last message: 499252927
+54712102045966: Node.id = 26 time since last message: 514118512
+54712102157899: Node.id = 27 time since last message: 504453190
+54712108801357: Node.id = 28 time since last message: 499108824
+54712117320422: Node.id = 29 time since last message: 507586901
+54712121320017: Node.id = 30 time since last message: 511533059
+54712133315553: Node.id = 31 time since last message: 523479335
+54712146107914: Node.id = 32 time since last message: 536222610
+54712151298086: Node.id = 33 time since last message: 541374461
+54712164139394: Node.id = 34 time since last message: 554176163
+54712164180240: Node.id = 35 time since last message: 554179200
+54712164624923: Node.id = 36 time since last message: 554582816
+54712174231690: Node.id = 37 time since last message: 564126215
+54712174274167: Node.id = 38 time since last message: 564099903
+54712174326191: Node.id = 39 time since last message: 560279426
+54712174364871: Node.id = 40 time since last message: 554570193
+54712188425377: Node.id = 41 time since last message: 568487152
+54712188462679: Node.id = 12 time since last message: 620996510
+54712188492279: Node.id = 13 time since last message: 621016394
+54712194154498: Node.id = 14 time since last message: 626588378
+54712194185836: Node.id = 15 time since last message: 626614349
+54712194246820: Node.id = 16 time since last message: 626583449
+54712194682312: Node.id = 17 time since last message: 626968227
+54712204250113: Node.id = 18 time since last message: 636481146
+54712210456109: Node.id = 19 time since last message: 642598880
+54712212496424: Node.id = 20 time since last message: 644594702
+54712218441279: Node.id = 21 time since last message: 650458278
+54712218482631: Node.id = 22 time since last message: 650447957
+54712228442094: Node.id = 23 time since last message: 650876908
+54712234946572: Node.id = 24 time since last message: 657087631
+54712240488985: Node.id = 25 time since last message: 652889645
+54712252768773: Node.id = 26 time since last message: 664841319
+54712257467045: Node.id = 27 time since last message: 659762336
+54712260402031: Node.id = 28 time since last message: 650709498
+54712268728335: Node.id = 29 time since last message: 658994814
+54712270531917: Node.id = 30 time since last message: 660744959
+54712282782708: Node.id = 31 time since last message: 672946490
+54712282859607: Node.id = 32 time since last message: 672974303
+54712282900902: Node.id = 33 time since last message: 672977277
+54712295284367: Node.id = 34 time since last message: 685321136
+54712295354664: Node.id = 35 time since last message: 685353624
+54712296701920: Node.id = 36 time since last message: 686659813
+54712322929087: Node.id = 37 time since last message: 712823612
+54712326885059: Node.id = 38 time since last message: 716710795
+54712328758528: Node.id = 39 time since last message: 714711763
+54712332943757: Node.id = 40 time since last message: 713149079
+54712344584873: Node.id = 41 time since last message: 724646648
+54712344642494: Node.id = 12 time since last message: 777176325
+54712359130716: Node.id = 13 time since last message: 791654831
+54712376896634: Node.id = 14 time since last message: 809330514
+54712377084599: Node.id = 15 time since last message: 809513112
+54712377127013: Node.id = 16 time since last message: 809463642
+54712377293464: Node.id = 17 time since last message: 809579379
+54712386892088: Node.id = 18 time since last message: 819123121
+54712391576113: Node.id = 19 time since last message: 823718884
+54712396901432: Node.id = 20 time since last message: 828999710
+54712404597361: Node.id = 21 time since last message: 836614360
+54712418292230: Node.id = 22 time since last message: 850257556
+54712418334820: Node.id = 23 time since last message: 840769634
+54712418376400: Node.id = 24 time since last message: 840517459
+54712420338380: Node.id = 25 time since last message: 832739040
+54712432276124: Node.id = 26 time since last message: 844348670
+54712436935650: Node.id = 27 time since last message: 839230941
+54712446512447: Node.id = 28 time since last message: 836819914
+54712446699885: Node.id = 29 time since last message: 836966364
+54712456082860: Node.id = 30 time since last message: 846295902
+54712469295058: Node.id = 31 time since last message: 859458840
+54712469368724: Node.id = 32 time since last message: 859483420
+54712489000679: Node.id = 33 time since last message: 879077054
+54712489068914: Node.id = 34 time since last message: 879105683
+54712506324997: Node.id = 35 time since last message: 896323957
+54712511481438: Node.id = 36 time since last message: 901439331
+54712524883928: Node.id = 37 time since last message: 914778453
+54712524954964: Node.id = 38 time since last message: 914780700
+54712540037124: Node.id = 39 time since last message: 925990359
+54712551275594: Node.id = 40 time since last message: 931480916
+54712557090849: Node.id = 41 time since last message: 937152624
+54712557134936: Node.id = 12 time since last message: 989668767
+54712557175600: Node.id = 13 time since last message: 989699715
+54712562648728: Node.id = 14 time since last message: 995082608
+54712567105073: Node.id = 15 time since last message: 999533586
+54712579700821: Node.id = 16 time since last message: 1012037450
+54712597149979: Node.id = 17 time since last message: 1029435894
+54712597975181: Node.id = 18 time since last message: 1030206214
+54712599313691: Node.id = 19 time since last message: 1031456462
+54712619357658: Node.id = 20 time since last message: 1051455936
+54712620491576: Node.id = 21 time since last message: 1052508575
+54712631265378: Node.id = 22 time since last message: 1063230704
+54712631324448: Node.id = 23 time since last message: 1053759262
+54712633702625: Node.id = 24 time since last message: 1055843684
+54712643154737: Node.id = 25 time since last message: 1055555397
+54712660266299: Node.id = 26 time since last message: 1072338845
+54712662630674: Node.id = 27 time since last message: 1064925965
+54712686331826: Node.id = 28 time since last message: 1076639293
+54712699194496: Node.id = 29 time since last message: 1089460975
+54712706677898: Node.id = 30 time since last message: 1096890940
+54712713372451: Node.id = 31 time since last message: 1103536233
+54712726487571: Node.id = 32 time since last message: 1116602267
+54712732294117: Node.id = 33 time since last message: 1122370492
+54712744108546: Node.id = 34 time since last message: 1134145315
+54712744447626: Node.id = 35 time since last message: 1134446586
+54712744949907: Node.id = 36 time since last message: 1134907800
+54712757651767: Node.id = 37 time since last message: 1147546292
+54712766713792: Node.id = 38 time since last message: 1156539528
+54712769558972: Node.id = 39 time since last message: 1155512207
+54712786563515: Node.id = 40 time since last message: 1166768837
+54712788401067: Node.id = 41 time since last message: 1168462842
+54712805103888: Node.id = 12 time since last message: 1237637719
+54712818169868: Node.id = 13 time since last message: 1250693983
+54712818206574: Node.id = 14 time since last message: 1250640454
+54712833562411: Node.id = 15 time since last message: 1265990924
+54712846756114: Node.id = 16 time since last message: 1279092743
+54712857296778: Node.id = 17 time since last message: 1289582693
+54712865126096: Node.id = 18 time since last message: 1297357129
+54712865201989: Node.id = 19 time since last message: 1297344760
+54712879224173: Node.id = 20 time since last message: 1311322451
+54712886482750: Node.id = 21 time since last message: 1318499749
+54712886540943: Node.id = 22 time since last message: 1318506269
+54712902418410: Node.id = 23 time since last message: 1324853224
+54712920321608: Node.id = 24 time since last message: 1342462667
+54712923548077: Node.id = 25 time since last message: 1335948737
+54712943381234: Node.id = 26 time since last message: 1355453780
+54712954399534: Node.id = 27 time since last message: 1356694825
+54712954661013: Node.id = 28 time since last message: 1344968480
+54712966925145: Node.id = 29 time since last message: 1357191624
+54712978083335: Node.id = 30 time since last message: 1368296377
+54712984886889: Node.id = 31 time since last message: 1375050671
+54712994992179: Node.id = 32 time since last message: 1385106875
+54713001349723: Node.id = 33 time since last message: 1391426098
+54713006891982: Node.id = 34 time since last message: 1396928751
+54713016317797: Node.id = 35 time since last message: 1406316757
+54713016379425: Node.id = 36 time since last message: 1406337318
+54713019661269: Node.id = 37 time since last message: 1409555794
+54713026929930: Node.id = 38 time since last message: 1416755666
+54713040201422: Node.id = 39 time since last message: 1426154657
+54713040242908: Node.id = 40 time since last message: 1420448230
+54713049550671: Node.id = 41 time since last message: 1429612446
+54713049592653: Node.id = 12 time since last message: 1482126484
+54713049771848: Node.id = 13 time since last message: 1482295963
+54713075523660: Node.id = 14 time since last message: 1507957540
+54713075593762: Node.id = 15 time since last message: 1508022275
+54713090976072: Node.id = 16 time since last message: 1523312701
+54713091381670: Node.id = 17 time since last message: 1523667585
+54713091421298: Node.id = 18 time since last message: 1523652331
+54713091454762: Node.id = 19 time since last message: 1523597533
+54713093376246: Node.id = 20 time since last message: 1525474524
+54713100406445: Node.id = 21 time since last message: 1532423444
+54713100510037: Node.id = 22 time since last message: 1532475363
+54713100551538: Node.id = 23 time since last message: 1522986352
+54713111053725: Node.id = 24 time since last message: 1533194784
+54713111412218: Node.id = 25 time since last message: 1523812878
+54713111455280: Node.id = 26 time since last message: 1523527826
+54713119775379: Node.id = 27 time since last message: 1522070670
+54713119852573: Node.id = 28 time since last message: 1510160040
+54713124753493: Node.id = 29 time since last message: 1515019972
+54713132506177: Node.id = 30 time since last message: 1522719219
+54713151623221: Node.id = 31 time since last message: 1541787003
+54713158780827: Node.id = 32 time since last message: 1548895523
+54713163000365: Node.id = 33 time since last message: 1553076740
+54713166395279: Node.id = 34 time since last message: 1556432048
+54713180665601: Node.id = 35 time since last message: 1570664561
+54713180732332: Node.id = 36 time since last message: 1570690225
+54713203004067: Node.id = 37 time since last message: 1592898592
+54713203055080: Node.id = 38 time since last message: 1592880816
+54713203091096: Node.id = 39 time since last message: 1589044331
+54713203125995: Node.id = 40 time since last message: 1583331317
+54713213523820: Node.id = 41 time since last message: 1593585595
+54713213574409: Node.id = 12 time since last message: 1646108240
+54713213602723: Node.id = 13 time since last message: 1646126838
+54713213637741: Node.id = 14 time since last message: 1646071621
+54713213672822: Node.id = 15 time since last message: 1646101335
+54713223527021: Node.id = 16 time since last message: 1655863650
+54713232150519: Node.id = 17 time since last message: 1664436434
+54713242946007: Node.id = 18 time since last message: 1675177040
+54713244903010: Node.id = 19 time since last message: 1677045781
+54713253324759: Node.id = 20 time since last message: 1685423037
+54713260914500: Node.id = 21 time since last message: 1692931499
+54713260951080: Node.id = 22 time since last message: 1692916406
+54713274201809: Node.id = 23 time since last message: 1696636623
+54713291258685: Node.id = 24 time since last message: 1713399744
+54713292965404: Node.id = 25 time since last message: 1705366064
+54713297006470: Node.id = 26 time since last message: 1709079016
+54713303366036: Node.id = 27 time since last message: 1705661327
+54713303427891: Node.id = 28 time since last message: 1693735358
+54713308856644: Node.id = 29 time since last message: 1699123123
+54713318698275: Node.id = 30 time since last message: 1708911317
+54713318793116: Node.id = 31 time since last message: 1708956898
+54713318848534: Node.id = 32 time since last message: 1708963230
+54713321561603: Node.id = 33 time since last message: 1711637978
+54713323550231: Node.id = 34 time since last message: 1713587000
+54713342996879: Node.id = 35 time since last message: 1732995839
+54713343067775: Node.id = 36 time since last message: 1733025668
+54713343139349: Node.id = 37 time since last message: 1733033874
+54713352998793: Node.id = 38 time since last message: 1742824529
+54713356936786: Node.id = 39 time since last message: 1742890021
+54713358393057: Node.id = 40 time since last message: 1738598379
+54713358436608: Node.id = 41 time since last message: 1738498383
+54713364524859: Node.id = 12 time since last message: 1797058690
+54713371187993: Node.id = 13 time since last message: 1803712108
+54713379477854: Node.id = 14 time since last message: 1811911734
+54713379559860: Node.id = 15 time since last message: 1811988373
+54713387515649: Node.id = 16 time since last message: 1819852278
+54713392369290: Node.id = 17 time since last message: 1824655205
+54713402261837: Node.id = 18 time since last message: 1834492870
+54713402555081: Node.id = 19 time since last message: 1834697852
+54713413267451: Node.id = 20 time since last message: 1845365729
+54713423766596: Node.id = 21 time since last message: 1855783595
+54713423818025: Node.id = 22 time since last message: 1855783351
+54713436932075: Node.id = 23 time since last message: 1859366889
+54713457555308: Node.id = 24 time since last message: 1879696367
+54713457664267: Node.id = 25 time since last message: 1870064927
+54713461987950: Node.id = 26 time since last message: 1874060496
+54713462060767: Node.id = 27 time since last message: 1864356058
+54713462107474: Node.id = 28 time since last message: 1852414941
+54713475630289: Node.id = 29 time since last message: 1865896768
+54713482828796: Node.id = 30 time since last message: 1873041838
+54713483131141: Node.id = 31 time since last message: 1873294923
+54713483277496: Node.id = 32 time since last message: 1873392192
+54713487878341: Node.id = 33 time since last message: 1877954716
+54713487968606: Node.id = 34 time since last message: 1878005375
+54713509019542: Node.id = 35 time since last message: 1899018502
+54713509184760: Node.id = 36 time since last message: 1899142653
+54713510025130: Node.id = 37 time since last message: 1899919655
+54713519370065: Node.id = 38 time since last message: 1909195801
+54713525267682: Node.id = 39 time since last message: 1911220917
+54713530257347: Node.id = 40 time since last message: 1910462669
+54713547271454: Node.id = 41 time since last message: 1927333229
+54713563516065: Node.id = 12 time since last message: 1996049896
+54713575425973: Node.id = 13 time since last message: 2007950088
+54713578598371: Node.id = 14 time since last message: 2011032251
+54713578730369: Node.id = 15 time since last message: 2011158882
+54713587104244: Node.id = 16 time since last message: 2019440873
+54713587273389: Node.id = 17 time since last message: 2019559304
+54713596713676: Node.id = 18 time since last message: 2028944709
+54713600711538: Node.id = 19 time since last message: 2032854309
+54713604471371: Node.id = 20 time since last message: 2036569649
+54713621565364: Node.id = 21 time since last message: 2053582363
+54713621625931: Node.id = 22 time since last message: 2053591257
+54713635020476: Node.id = 23 time since last message: 2057455290
+54713635069814: Node.id = 24 time since last message: 2057210873
+54713635104800: Node.id = 25 time since last message: 2047505460
+54713635139109: Node.id = 26 time since last message: 2047211655
+54713637310335: Node.id = 27 time since last message: 2039605626
+54713668487604: Node.id = 28 time since last message: 2058795071
+54713676366282: Node.id = 29 time since last message: 2066632761
+54713688488226: Node.id = 30 time since last message: 2078701268
+54713712203112: Node.id = 31 time since last message: 2102366894
+54713724786013: Node.id = 32 time since last message: 2114900709
+54713739578755: Node.id = 33 time since last message: 2129655130
+54713746386875: Node.id = 34 time since last message: 2136423644
+54713746475045: Node.id = 35 time since last message: 2136474005
+54713766020149: Node.id = 36 time since last message: 2155978042
+54713766479187: Node.id = 37 time since last message: 2156373712
+54713780784852: Node.id = 38 time since last message: 2170610588
+54713786914693: Node.id = 39 time since last message: 2172867928
+54713798806406: Node.id = 40 time since last message: 2179011728
+54713814831007: Node.id = 41 time since last message: 2194892782
+54713830237720: Node.id = 12 time since last message: 2262771551
+54713830305717: Node.id = 13 time since last message: 2262829832
+54713837689704: Node.id = 14 time since last message: 2270123584
+54713852947790: Node.id = 15 time since last message: 2285376303
+54713856782120: Node.id = 16 time since last message: 2289118749
+54713865505170: Node.id = 17 time since last message: 2297791085
+54713876654233: Node.id = 18 time since last message: 2308885266
+54713876703046: Node.id = 19 time since last message: 2308845817
+54713876745730: Node.id = 20 time since last message: 2308844008
+54713876781160: Node.id = 21 time since last message: 2308798159
+54713890525760: Node.id = 22 time since last message: 2322491086
+54713904613535: Node.id = 23 time since last message: 2327048349
+54713907071655: Node.id = 24 time since last message: 2329212714
+54713907111693: Node.id = 25 time since last message: 2319512353
+54713917185441: Node.id = 26 time since last message: 2329257987
+54713927926128: Node.id = 27 time since last message: 2330221419
+54713928800890: Node.id = 28 time since last message: 2319108357
+54713940146128: Node.id = 29 time since last message: 2330412607
+54713940218668: Node.id = 30 time since last message: 2330431710
+54713947447115: Node.id = 31 time since last message: 2337610897
+54713966725227: Node.id = 32 time since last message: 2356839923
+54713976732334: Node.id = 33 time since last message: 2366808709
+54713976795497: Node.id = 34 time since last message: 2366832266
+54713981111391: Node.id = 35 time since last message: 2371110351
+54713998989284: Node.id = 36 time since last message: 2388947177
+54713999046081: Node.id = 37 time since last message: 2388940606
+54714013171254: Node.id = 38 time since last message: 2402996990
+54714039927324: Node.id = 39 time since last message: 2425880559
+54714050084990: Node.id = 40 time since last message: 2430290312
+54714050141901: Node.id = 41 time since last message: 2430203676
+54714056798607: Node.id = 12 time since last message: 2489332438
+54714068681207: Node.id = 13 time since last message: 2501205322
+54714068717354: Node.id = 14 time since last message: 2501151234
+54714074310406: Node.id = 15 time since last message: 2506738919
+54714083999016: Node.id = 16 time since last message: 2516335645
+54714086834620: Node.id = 17 time since last message: 2519120535
+54714095168404: Node.id = 18 time since last message: 2527399437
+54714095225968: Node.id = 19 time since last message: 2527368739
+54714095254987: Node.id = 20 time since last message: 2527353265
+54714098632205: Node.id = 21 time since last message: 2530649204
+54714098663848: Node.id = 22 time since last message: 2530629174
+54714098687926: Node.id = 23 time since last message: 2521122740
+54714101258716: Node.id = 24 time since last message: 2523399775
+54714101275493: Node.id = 25 time since last message: 2513676153
+54714108631081: Node.id = 26 time since last message: 2520703627
+54714120782084: Node.id = 27 time since last message: 2523077375
+54714120842357: Node.id = 28 time since last message: 2511149824
+54714130775544: Node.id = 29 time since last message: 2521042023
+54714133246623: Node.id = 30 time since last message: 2523459665
+54714139229637: Node.id = 31 time since last message: 2529393419
+54714152128204: Node.id = 32 time since last message: 2542242900
+54714163338098: Node.id = 33 time since last message: 2553414473
+54714163520275: Node.id = 34 time since last message: 2553557044
+54714163592114: Node.id = 35 time since last message: 2553591074
+54714163630253: Node.id = 36 time since last message: 2553588146
+54714163739460: Node.id = 37 time since last message: 2553633985
+54714171401832: Node.id = 38 time since last message: 2561227568
+54714172105329: Node.id = 39 time since last message: 2558058564
+54714183478963: Node.id = 40 time since last message: 2563684285
+54714183546117: Node.id = 41 time since last message: 2563607892
+54714187782021: Node.id = 12 time since last message: 2620315852
+54714200830481: Node.id = 13 time since last message: 2633354596
+54714201077892: Node.id = 14 time since last message: 2633511772
+54714207782700: Node.id = 15 time since last message: 2640211213
+54714214991107: Node.id = 16 time since last message: 2647327736
+54714218370518: Node.id = 17 time since last message: 2650656433
+54714228371858: Node.id = 18 time since last message: 2660602891
+54714228422605: Node.id = 19 time since last message: 2660565376
+54714228456234: Node.id = 20 time since last message: 2660554512
+54714234881514: Node.id = 21 time since last message: 2666898513
