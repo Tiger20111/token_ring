@@ -3,8 +3,10 @@ package network.ring;
 import network.msg.Message;
 import network.msg.MessageQueue;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.logging.FileHandler;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -16,6 +18,7 @@ public class Node implements Runnable {
     private boolean work = true;
     public Node () throws IOException {
         createLogger();
+        reserve = new MessageQueue();
     }
 
     public void run() {
@@ -24,7 +27,7 @@ public class Node implements Runnable {
         }
     }
 
-    public void setNextNode(Node node) {
+    void setNextNode(Node node) {
         next = node;
     }
 
@@ -59,9 +62,8 @@ public class Node implements Runnable {
     }
 
     private void createLogger() throws IOException {
-        FileHandler fh = new FileHandler("/Users/tiger/IdeaProjects/token_ring/logs/ring.log");
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();
-        fh.setFormatter(formatter);
+        FileInputStream ins = new FileInputStream("/Users/tiger/IdeaProjects/token_ring/logs/ring.log");
+        LogManager.getLogManager().readConfiguration(ins);
+        logger = Logger.getLogger(this.getClass().getName());
     }
 }

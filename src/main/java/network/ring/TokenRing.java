@@ -26,10 +26,12 @@ public class TokenRing {
     private void generateRing(int size) throws IOException {
         for (int i = 0; i < size; i++) {
             Node currentNode = new Node();
-            if (i != size - 1) {
-                nodes.get(i - 1).setNextNode(currentNode);
-            } else {
-                currentNode.setNextNode(nodes.get(0));
+            if (i != 0) {
+                if (i != size - 1) {
+                    nodes.get(i - 1).setNextNode(currentNode);
+                } else {
+                    currentNode.setNextNode(nodes.get(0));
+                }
             }
             nodes.add(currentNode);
         }

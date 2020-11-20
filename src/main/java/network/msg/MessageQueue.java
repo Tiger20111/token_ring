@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MessageQueue {
     private ConcurrentLinkedQueue<Message> queue;
-    MessageQueue() {
+    public MessageQueue() {
         queue = new ConcurrentLinkedQueue<>();
     }
 
