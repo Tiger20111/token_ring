@@ -27,14 +27,11 @@ public class TokenRing {
         for (int i = 0; i < size; i++) {
             Node currentNode = new Node();
             if (i != 0) {
-                if (i != size - 1) {
-                    nodes.get(i - 1).setNextNode(currentNode);
-                } else {
-                    currentNode.setNextNode(nodes.get(0));
-                }
+                nodes.get(i - 1).setNextNode(currentNode);
             }
             nodes.add(currentNode);
         }
+        nodes.get(nodes.size() - 1).setNextNode(nodes.get(0));
     }
 
     private void generateMessages(int size, int shift) {
