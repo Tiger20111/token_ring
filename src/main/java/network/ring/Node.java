@@ -2,7 +2,6 @@ package network.ring;
 
 import network.msg.Message;
 import network.msg.MessageQueue;
-import java.io.IOException;
 import org.apache.log4j.Logger;
 
 
@@ -12,7 +11,7 @@ public class Node implements Runnable {
     private MessageQueue reserve;
     private long visitedTime = -1;
     private boolean work = true;
-    public Node () throws IOException {
+    public Node () {
         createLogger();
         reserve = new MessageQueue();
     }
@@ -57,8 +56,8 @@ public class Node implements Runnable {
         reserve.addMessage(message);
     }
 
-    private void createLogger() throws IOException {
+    private void createLogger() {
         logger = Logger.getLogger(getClass());
-        logger.info("Logger has started");
+        logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has started");
     }
 }

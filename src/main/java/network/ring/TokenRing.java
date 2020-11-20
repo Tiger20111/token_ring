@@ -9,7 +9,7 @@ public class TokenRing {
     private ArrayList<Node> nodes;
     private ArrayList<Message> messages;
 
-    public TokenRing(int numNodes, int numMessages, int shift) throws IOException {
+    public TokenRing(int numNodes, int numMessages, int shift) {
         nodes = new ArrayList<>();
         messages = new ArrayList<>();
         generateRing(numNodes);
@@ -23,7 +23,7 @@ public class TokenRing {
         }
     }
 
-    private void generateRing(int size) throws IOException {
+    private void generateRing(int size) {
         for (int i = 0; i < size; i++) {
             Node currentNode = new Node();
             if (i != 0) {
