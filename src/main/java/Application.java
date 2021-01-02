@@ -11,5 +11,6 @@ public class Application {
         int shift = scanner.nextInt();
         TokenRing tokenRing = new TokenRing(n, m, shift);
         tokenRing.executeRing();
+        tokenRing.saveStatistic();
     }
 }
