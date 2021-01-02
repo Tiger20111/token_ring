@@ -40,6 +40,7 @@ public class Node implements Runnable {
             }
         } while (true);
         long stoppedTime = System.nanoTime();
+        workTime = stoppedTime - statTime;
         logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has ended in " + stoppedTime);
     }
 

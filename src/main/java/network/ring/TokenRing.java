@@ -21,8 +21,9 @@ public class TokenRing {
         messages = new ArrayList<>();
         generateRing(numNodes, numMessages);
         generateMessages(numMessages, shift);
-        nodeBank = new NodeBank(nodes, numMessages);
+        nodeBank = new NodeBank(nodes);
         messageBank = new MessageBank(messages);
+        setStartParamsStatistic(numNodes, numMessages, shift);
     }
 
     public void executeRing() {
@@ -37,7 +38,7 @@ public class TokenRing {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -86,6 +87,12 @@ public class TokenRing {
             messages.add(message);
             nodes.get(i % nodes.size()).addMessageReserve(message);
         }
+    }
+
+    private void setStartParamsStatistic(int numNodes, int numMessages, int shift) {
+        statistic.setShift(shift);
+        statistic.setNumberThread(numNodes);
+        statistic.setNumberMessages(numMessages);
     }
 
     public void saveStatistic() {
