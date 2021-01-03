@@ -26,8 +26,7 @@ public class TokenRing {
         setStartParamsStatistic(numNodes, numMessages, shift);
     }
 
-    public void executeRing() {
-        long timeStart = System.nanoTime();
+    public void executeRing(final int timeWork) {
         ArrayList<Future<?>> futures = new ArrayList<>();
         ExecutorService executorService = Executors.newFixedThreadPool(nodes.size() + 1);
         for (Node node:
@@ -38,7 +37,7 @@ public class TokenRing {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(timeWork);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -59,7 +58,6 @@ public class TokenRing {
             }
         }
         executorService.shutdown();
-        statistic.setTimePrecessingRing((System.nanoTime() - timeStart));
         nodeBank.calculateNode(statistic);
         messageBank.analyseMessages(statistic);
     }

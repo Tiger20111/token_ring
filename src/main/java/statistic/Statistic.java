@@ -3,7 +3,6 @@ package statistic;
 import java.io.*;
 
 public class Statistic {
-    private long milliseconds = 1_000_000;
     private int numberThread;
     private int numberMessages;
     private int shift;
@@ -30,12 +29,12 @@ public class Statistic {
         this.shift = shift;
     }
 
-    public void setThroughputRing(int throughputRing) {
+    public void setThroughputRing(long throughputRing) {
         this.throughputRing = throughputRing;
     }
 
     public void setTimePrecessingRing(long timePrecessingRing) {
-        this.timePrecessingRing = timePrecessingRing / milliseconds;
+        this.timePrecessingRing = timePrecessingRing;
     }
 
     public void setThroughputChain(double throughputChain) {
@@ -47,11 +46,11 @@ public class Statistic {
     }
 
     public void setMinTimeWorkThread(long minTimeWorkThread) {
-        this.minTimeWorkThread = minTimeWorkThread / milliseconds;
+        this.minTimeWorkThread = minTimeWorkThread;
     }
 
     public void setMaxTimeWorkThread(long maxTimeWorkThread) {
-        this.maxTimeWorkThread = maxTimeWorkThread / milliseconds;
+        this.maxTimeWorkThread = maxTimeWorkThread;
     }
 
     public void setPercentWork(double percentWork) {
@@ -91,8 +90,10 @@ public class Statistic {
     }
 
     private void recalculateParams() {
-        throughputRing = throughputRing / (double) (timePrecessingRing / 1000);
-        setThroughputChain(throughputRing / numberThread);
+        throughputRing = throughputRing / numberThread;
+        double sec = ((double) timePrecessingRing) / 1000;
+        throughputRing = throughputRing / sec;
+        setThroughputChain(throughputRing);
     }
 
     @Override

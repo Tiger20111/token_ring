@@ -5,6 +5,7 @@ import network.msg.Message;
 import org.apache.log4j.Logger;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -17,8 +18,11 @@ public class Node implements Runnable {
     private boolean work = true;
     private int numExecuted;
     private long workTime;
+    private long startTime;
     int id;
+    private final Lock sleepLock = new ReentrantLock();
     private final Lock lock = new ReentrantLock();
+    Condition condition = sleepLock.newCondition();
     public Node (int id, int reserveSize) {
         this.id = id;
         createLogger();
@@ -27,8 +31,8 @@ public class Node implements Runnable {
     }
 
     public void run() {
-        long statTime = System.nanoTime();
-        logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has started in " + statTime);
+        startTime = System.nanoTime();
+        logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has started in " + startTime);
         do {
             lock.lock();
             if (work) {
@@ -40,7 +44,7 @@ public class Node implements Runnable {
             }
         } while (true);
         long stoppedTime = System.nanoTime();
-        workTime = stoppedTime - statTime;
+        workTime += stoppedTime - startTime;
         logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has ended in " + stoppedTime);
     }
 
@@ -51,6 +55,9 @@ public class Node implements Runnable {
     public void turnOffNode() {
         lock.lock();
         work = false;
+        sleepLock.lock();
+        condition.signalAll();
+        sleepLock.unlock();
         lock.unlock();
     }
 
@@ -75,6 +82,18 @@ public class Node implements Runnable {
 
     public void sendMessageFromReserve() {
         if (reserve.isEmpty()) {
+            try {
+                long stopTime = System.nanoTime();
+                workTime += stopTime - startTime;
+                sleepLock.lock();
+                lock.unlock();
+                condition.await();
+                lock.lock();
+                sleepLock.unlock();
+                startTime = System.nanoTime();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return;
         }
         Message message = reserve.remove(0);
@@ -83,6 +102,9 @@ public class Node implements Runnable {
 
     public void addMessageTransfer(Message message) {
         queue.add(message);
+        sleepLock.lock();
+        condition.signal();
+        sleepLock.unlock();
     }
 
     public void addMessageReserve(Message message) {

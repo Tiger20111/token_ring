@@ -1,2 +1,0 @@
-numberThread numberMessages shift timePrecessingRing throughputRing throughputChain latencyChain minTimeWorkThread maxTimeWorkThread percentWork
-10 6000000 9 1007 2265755.0 226575.5 394 1001 1002 0.27781316666666667
