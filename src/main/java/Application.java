@@ -21,7 +21,7 @@ public class Application {
     public static void main(String[] args) {
         int numRuns = 100;
         ArrayList<StartParams> arrayStartParams = getStartParams();
-        for (int i = 1; i < numRuns; i++) {
+        for (int i = 0; i < numRuns; i++) {
             System.out.println("Epoch: " + i + "/" + numRuns);
             for (StartParams startParams : arrayStartParams) {
                 for (int timeWork : startParams.timeWork) {
@@ -34,10 +34,7 @@ public class Application {
     }
     private static ArrayList<StartParams> getStartParams() {
         ArrayList<StartParams> startParams = new ArrayList<>();
-        startParams.add(new StartParams(9, 10_000_000, 4, Arrays.asList(1000, 2000, 4000, 6000)));
-        startParams.add(new StartParams(9, 10_000_000, 8, Arrays.asList(1000, 2000, 4000, 6000)));
-        startParams.add(new StartParams(12, 10_000_000, 4, Arrays.asList(1000, 2000, 4000, 6000)));
-        startParams.add(new StartParams(12, 10_000_000, 8, Arrays.asList(1000, 2000, 4000, 6000)));
+        startParams.add(new StartParams(6, 10_000_000, 5, Arrays.asList(10000)));
         return startParams;
     }
 }
