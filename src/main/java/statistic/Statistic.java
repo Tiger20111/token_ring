@@ -29,7 +29,7 @@ public class Statistic {
         this.shift = shift;
     }
 
-    public void setThroughputRing(long throughputRing) {
+    public void setThroughputRing(double throughputRing) {
         this.throughputRing = throughputRing;
     }
 
@@ -90,10 +90,10 @@ public class Statistic {
     }
 
     private void recalculateParams() {
-        throughputRing = throughputRing / numberThread;
         double sec = ((double) timePrecessingRing) / 1000;
         throughputRing = throughputRing / sec;
-        setThroughputChain(throughputRing);
+        setThroughputChain(throughputRing / numberThread);
+        setThroughputRing(throughputRing);
     }
 
     @Override

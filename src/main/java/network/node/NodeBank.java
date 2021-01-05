@@ -27,7 +27,7 @@ public class NodeBank {
             numExecuted += node.getNumExecuted();
             averageWorkTime += nodeTime;
         }
-        statistic.setThroughputRing(numExecuted / nodes.size());
+        statistic.setThroughputRing(numExecuted);
         statistic.setMinTimeWorkThread(min);
         statistic.setMaxTimeWorkThread(max);
         statistic.setTimePrecessingRing(averageWorkTime / nodes.size());

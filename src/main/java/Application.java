@@ -34,7 +34,7 @@ public class Application {
     }
     private static ArrayList<StartParams> getStartParams() {
         ArrayList<StartParams> startParams = new ArrayList<>();
-        startParams.add(new StartParams(6, 10_000_000, 5, Arrays.asList(10000)));
+        startParams.add(new StartParams(6, 1_000_000, 5, Arrays.asList(10000)));
         return startParams;
     }
 }

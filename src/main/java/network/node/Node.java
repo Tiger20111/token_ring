@@ -68,9 +68,8 @@ public class Node implements Runnable {
             return;
         }
 
-        numExecuted++;
-
         if (message.getId() == this.id) {
+            numExecuted++;
             message.setReceivedTime(System.nanoTime());
         } else {
             if (!message.getStartDeliver()) {
