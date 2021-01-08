@@ -56,10 +56,19 @@ public class Application {
     }
     private static ArrayList<StartParams> getStartParams() {
         ArrayList<StartParams> startParams = new ArrayList<>();
-        int start = 5;
-        int n = 101;
+        int start = 0;
+        int n = 1;
         for (int i = start; i < n; i++) {
-            startParams.add(new StartParams(i, 10_000_000, i - 1));
+            startParams.add(new StartParams(15, 10_000_000, 14));
+            startParams.add(new StartParams(16, 10_000_000, 15));
+            startParams.add(new StartParams(17, 10_000_000, 16));
+            startParams.add(new StartParams(56, 10_000_000, 55));
+            startParams.add(new StartParams(57, 10_000_000, 56));
+            startParams.add(new StartParams(58, 10_000_000, 57));
+            startParams.add(new StartParams(59, 10_000_000, 58));
+            startParams.add(new StartParams(60, 10_000_000, 59));
+            startParams.add(new StartParams(61, 10_000_000, 60));
+
         }
 
         return startParams;
