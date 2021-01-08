@@ -26,7 +26,7 @@ class StartParams {
 
 public class Application {
     public static void main(String[] args) {
-        int numRuns = 100;
+        int numRuns = 110;
         int numWarming = 0;
 
         String filePath = "/Users/a17644602/IdeaProjects/token_ring/data/";
@@ -48,7 +48,7 @@ public class Application {
                 TokenRing tokenRing = new TokenRing(startParams.numThreads, startParams.numMessages, startParams.shift);
                 tokenRing.executeRing(executorService);
                 tokenRing.saveStatistic(filePath + "test.txt");
-                //System.gc();
+                System.gc();
             }
             executorService.shutdown();
         }
@@ -57,7 +57,7 @@ public class Application {
     private static ArrayList<StartParams> getStartParams() {
         ArrayList<StartParams> startParams = new ArrayList<>();
         int start = 0;
-        int n = 110;
+        int n = 1;
         for (int i = start; i < n; i++) {
             startParams.add(new StartParams(12, 10_000_000, 5));
         }
