@@ -90,7 +90,7 @@ def latency(df, min_time, max_time):
 
   iplot(fig, show_link=True)
 
-def throughputThreads(df1, df2, numThreads, min_time, max_time):
+def throughputRing(df1, df2, numThreads, min_time, max_time):
   df1 = df1.loc[(min_time <= df1['timePrecessingRing']) & (df1['timePrecessingRing'] < max_time)]
   df2 = df2.loc[(min_time <= df2['timePrecessingRing']) & (df2['timePrecessingRing'] < max_time)]
 
@@ -156,14 +156,18 @@ def latencyThreads(df1, df2, numThreads):
   iplot(fig, show_link=True)
 
 def throughputThreadsShift(df_local, numThread1, num_message1):
-  df1 = df_local.loc[(df_local['numberThread'] == numThread1) & (df_local['shift'] == shift1) & (df_local['numberMessages'] == num_message1)]
+  df1 = df_local.loc[(df_local['numberThread'] == numThread1) & (df_local['numberMessages'] == num_message1)]
 
-  df1 = df1.sort_values(by='shift')
+  result = {}
+  dif_shift = df1['shift'].unique()
+  for shift in dif_shift:
+    df_op = df1.loc[df1['shift'] == shift]
+    result[shift] = df_op['throughputRing'].mean()
 
   name1= 'Threads ' + str(numThread1) + ' and number of message ' + str(num_message1)
   trace1 = go.Scatter(
-      x=df1.shift,
-      y=df1.throughputRing,
+      x=list(result.keys()),
+      y=list(result.values()),
       name=name1
   )
 
