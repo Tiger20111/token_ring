@@ -6,6 +6,7 @@ import network.node.Node;
 import network.node.NodeBank;
 import statistic.Statistic;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.concurrent.*;
 
@@ -17,37 +18,24 @@ public class TokenRing {
     private final MessageBank messageBank;
 
     public TokenRing(int numNodes, int numMessages, int shift) {
+        if (numMessages % numNodes != 0) {
+            numMessages += (numNodes - (numMessages % numNodes));
+        }
         nodes = new ArrayList<>();
         messages = new ArrayList<>();
-        generateRing(numNodes, numMessages);
+        generateRing(numNodes, numMessages, shift);
         generateMessages(numMessages, shift);
         nodeBank = new NodeBank(nodes);
         messageBank = new MessageBank(messages);
         setStartParamsStatistic(numNodes, numMessages, shift);
     }
 
-    public void executeRing(final int timeWork) {
+    public void executeRing(ExecutorService executorService) {
         ArrayList<Future<?>> futures = new ArrayList<>();
-        ExecutorService executorService = Executors.newFixedThreadPool(nodes.size() + 1);
         for (Node node:
                 nodes) {
             futures.add(executorService.submit(node));
         }
-        Future<?> f = executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(timeWork);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                for (Node node:
-                        nodes) {
-                    node.turnOffNode();
-                }
-            }
-        });
-        futures.add(f);
         for (Future<?> future : futures) {
             try {
                 future.get();
@@ -57,14 +45,14 @@ public class TokenRing {
                 e.printStackTrace();
             }
         }
-        executorService.shutdown();
+
         nodeBank.calculateNode(statistic);
         messageBank.analyseMessages(statistic);
     }
 
-    private void generateRing(int size, int reserveSize) {
+    private void generateRing(int size, int reserveSize, int shift) {
         for (int i = 0; i < size; i++) {
-            Node currentNode = new Node(i, reserveSize);
+            Node currentNode = new Node(i, reserveSize / size, shift);
             if (i != 0) {
                 nodes.get(i - 1).setNextNode(currentNode);
             }
@@ -74,11 +62,7 @@ public class TokenRing {
     }
 
     private void generateMessages(int size, int shift) {
-        Message messageStart = new Message();
-        messageStart.setId(0);
-        messages.add(messageStart);
-        nodes.get(0).addMessageReserve(messageStart);
-        for (int i = 1; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             Message message = new Message();
             message.setId((shift + i) % nodes.size());
             message.setMessage("id = " + (i % nodes.size()));
@@ -93,8 +77,8 @@ public class TokenRing {
         statistic.setNumberMessages(numMessages);
     }
 
-    public void saveStatistic() {
-        statistic.saveToFile();
+    public void saveStatistic(String filePath) {
+        statistic.saveToFile(filePath);
         System.out.println(statistic);
     }
 

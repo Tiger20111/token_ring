@@ -3,6 +3,7 @@ package network.msg;
 import statistic.Statistic;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class MessageBank {
     private final ArrayList<Message> messages;
@@ -13,18 +14,14 @@ public class MessageBank {
     }
 
     public void analyseMessages(Statistic statistic) {
-        long sec = 1_000_000;
-        long time = 0;
-        long numReceivedMessage = 0;
+        double time = 0;
+        long milliseconds = 1000000;
         for (Message message : messages) {
-            if (message.getReceivedTime() != 0) {
-                time += (message.getReceivedTime() - message.getSendTime()) / sec;
-                numReceivedMessage++;
-            }
+            long duration = message.getReceivedTime() - message.getSendTime();
+            double durationInMs = (double) duration / milliseconds;
+            time += durationInMs;
         }
-        statistic.setPercentWork((double) numReceivedMessage / messages.size());
-        statistic.setLatencyChain(time / numReceivedMessage);
-        System.out.println("Total received/all: " + numReceivedMessage + "/" + messages.size());
+        statistic.setLatencyChain(time / messages.size());
     }
 
 }

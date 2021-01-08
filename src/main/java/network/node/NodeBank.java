@@ -11,25 +11,12 @@ public class NodeBank {
     }
 
     public void calculateNode(Statistic statistic) {
-        long milliseconds = 1_000_000;
-        long min = -1;
-        long max = -1;
-        long     numExecuted = 0;
-        int averageWorkTime = 0;
+        double averageWorkTime = 0;
+        long milliseconds = 1000000;
         for (Node node : nodes) {
-            long nodeTime = node.getWorkTime() / milliseconds;
-            if (min == -1 || nodeTime < min) {
-                min = nodeTime;
-            }
-            if (max == -1 || nodeTime > max) {
-                max = nodeTime;
-            }
-            numExecuted += node.getNumExecuted();
-            averageWorkTime += nodeTime;
+            double durationInMs = (double) node.getWorkTime() / milliseconds;
+            averageWorkTime += durationInMs;
         }
-        statistic.setThroughputRing(numExecuted);
-        statistic.setMinTimeWorkThread(min);
-        statistic.setMaxTimeWorkThread(max);
         statistic.setTimePrecessingRing(averageWorkTime / nodes.size());
     }
 }

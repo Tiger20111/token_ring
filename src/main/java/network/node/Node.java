@@ -12,53 +12,35 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Node implements Runnable {
     private Node next;
-    private Logger logger;
     private final ArrayQueue<Message> reserve;
     private final ConcurrentLinkedQueue<Message> queue;
-    private boolean work = true;
-    private int numExecuted;
+    private int numExecuted = 0;
+    private int allMessage;
     private long workTime;
     private long startTime;
     int id;
     private final Lock sleepLock = new ReentrantLock();
-    private final Lock lock = new ReentrantLock();
     Condition condition = sleepLock.newCondition();
-    public Node (int id, int reserveSize) {
+    public Node (int id, int reserveSize, int shift) {
         this.id = id;
-        createLogger();
+        allMessage = reserveSize * (shift);
         reserve = new ArrayQueue<>(reserveSize);
         queue = new ConcurrentLinkedQueue<>();
     }
 
     public void run() {
         startTime = System.nanoTime();
-        logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has started in " + startTime);
-        do {
-            lock.lock();
-            if (work) {
-                executeMessage();
-                lock.unlock();
-            } else {
-                lock.unlock();
-                break;
+        while (!reserve.isEmpty() || numExecuted < allMessage) {
+            executeMessage();
+            if (numExecuted > allMessage) {
+                System.out.println();
             }
-        } while (true);
-        long stoppedTime = System.nanoTime();
-        workTime += stoppedTime - startTime;
-        logger.info("Thread.id = " + Thread.currentThread().getId() + " : Logger has ended in " + stoppedTime);
+        }
+        workTime += System.nanoTime() - startTime;
     }
 
     public void setNextNode(Node node) {
         next = node;
-    }
-
-    public void turnOffNode() {
-        lock.lock();
-        work = false;
-        sleepLock.lock();
-        condition.signalAll();
-        sleepLock.unlock();
-        lock.unlock();
     }
 
     private void executeMessage() {
@@ -67,9 +49,9 @@ public class Node implements Runnable {
             sendMessageFromReserve();
             return;
         }
+        numExecuted++;
 
         if (message.getId() == this.id) {
-            numExecuted++;
             message.setReceivedTime(System.nanoTime());
         } else {
             if (!message.getStartDeliver()) {
@@ -81,18 +63,16 @@ public class Node implements Runnable {
 
     public void sendMessageFromReserve() {
         if (reserve.isEmpty()) {
-            try {
-                long stopTime = System.nanoTime();
-                workTime += stopTime - startTime;
-                sleepLock.lock();
-                lock.unlock();
-                condition.await();
-                lock.lock();
-                sleepLock.unlock();
-                startTime = System.nanoTime();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                long stopTime = System.nanoTime();
+//                workTime += stopTime - startTime;
+//                sleepLock.lock();
+//                condition.await();
+//                sleepLock.unlock();
+//                startTime = System.nanoTime();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
             return;
         }
         Message message = reserve.remove(0);
@@ -101,21 +81,13 @@ public class Node implements Runnable {
 
     public void addMessageTransfer(Message message) {
         queue.add(message);
-        sleepLock.lock();
-        condition.signal();
-        sleepLock.unlock();
+//        sleepLock.lock();
+//        condition.signal();
+//        sleepLock.unlock();
     }
 
     public void addMessageReserve(Message message) {
         reserve.add(message);
-    }
-
-    private void createLogger() {
-        logger = Logger.getLogger(getClass());
-    }
-
-    public int getNumExecuted() {
-        return numExecuted;
     }
 
     public long getWorkTime() {

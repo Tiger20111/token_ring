@@ -6,13 +6,9 @@ public class Statistic {
     private int numberThread;
     private int numberMessages;
     private int shift;
-    private long timePrecessingRing;
+    private double timePrecessingRing;
     private double throughputRing;
-    private long latencyChain;
-    private double throughputChain;
-    private long minTimeWorkThread;
-    private long maxTimeWorkThread;
-    private double percentWork;
+    private double latencyChain;
 
     public Statistic() {
     }
@@ -29,35 +25,15 @@ public class Statistic {
         this.shift = shift;
     }
 
-    public void setThroughputRing(double throughputRing) {
-        this.throughputRing = throughputRing;
-    }
-
-    public void setTimePrecessingRing(long timePrecessingRing) {
+    public void setTimePrecessingRing(double timePrecessingRing) {
         this.timePrecessingRing = timePrecessingRing;
     }
 
-    public void setThroughputChain(double throughputChain) {
-        this.throughputChain = throughputChain;
-    }
-
-    public void setLatencyChain(long latencyChain) {
+    public void setLatencyChain(double latencyChain) {
         this.latencyChain = latencyChain;
     }
 
-    public void setMinTimeWorkThread(long minTimeWorkThread) {
-        this.minTimeWorkThread = minTimeWorkThread;
-    }
-
-    public void setMaxTimeWorkThread(long maxTimeWorkThread) {
-        this.maxTimeWorkThread = maxTimeWorkThread;
-    }
-
-    public void setPercentWork(double percentWork) {
-        this.percentWork = percentWork;
-    }
-
-    public void saveToFile() {
+    public void saveToFile(String filePath) {
         recalculateParams();
         String text = "\n" +
                 numberThread + " " +
@@ -65,12 +41,8 @@ public class Statistic {
                 shift + " " +
                 timePrecessingRing + " " +
                 throughputRing + " " +
-                throughputChain + " " +
-                latencyChain + " " +
-                minTimeWorkThread + " " +
-                maxTimeWorkThread + " " +
-                percentWork;
-        File file = new File("/Users/a17644602/IdeaProjects/token_ring/data/data.txt");
+                latencyChain;
+        File file = new File(filePath);
         FileWriter fr = null;
         try {
             fr = new FileWriter(file,true);
@@ -86,13 +58,17 @@ public class Statistic {
                 e.printStackTrace();
             }
         }
-        String dataNames = "numberThread numberMessages shift timePrecessingRing throughputRing throughputChain latencyChain minTimeWorkThread maxTimeWorkThread percentWork";
+        String dataNames = "numberThread numberMessages shift timePrecessingRing throughputRing latencyChain";
     }
+
+    private void setThroughputRing(double throughputRing) {
+        this.throughputRing = throughputRing;
+    }
+
 
     private void recalculateParams() {
         double sec = ((double) timePrecessingRing) / 1000;
-        throughputRing = throughputRing / sec;
-        setThroughputChain(throughputRing / numberThread);
+        throughputRing = numberMessages / sec;
         setThroughputRing(throughputRing);
     }
 
@@ -105,10 +81,6 @@ public class Statistic {
                 ", timePrecessingRing(milliseconds) = " + timePrecessingRing +
                 ", throughputRing(1sec) = " + throughputRing +
                 ", latencyChain(milliseconds) = " + latencyChain +
-                ", throughputChain(1sec) = " + throughputChain +
-                ", minTimeWorkThread(milliseconds) = " + minTimeWorkThread +
-                ", maxTimeWorkThread(milliseconds) = " + maxTimeWorkThread +
-                ", percentWork=" + percentWork +
                 '}';
     }
 }
