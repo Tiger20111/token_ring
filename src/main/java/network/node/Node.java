@@ -63,16 +63,16 @@ public class Node implements Runnable {
 
     public void sendMessageFromReserve() {
         if (reserve.isEmpty()) {
-//            try {
-//                long stopTime = System.nanoTime();
-//                workTime += stopTime - startTime;
-//                sleepLock.lock();
-//                condition.await();
-//                sleepLock.unlock();
-//                startTime = System.nanoTime();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                long stopTime = System.nanoTime();
+                workTime += stopTime - startTime;
+                sleepLock.lock();
+                condition.await();
+                sleepLock.unlock();
+                startTime = System.nanoTime();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return;
         }
         Message message = reserve.remove(0);
@@ -81,9 +81,9 @@ public class Node implements Runnable {
 
     public void addMessageTransfer(Message message) {
         queue.add(message);
-//        sleepLock.lock();
-//        condition.signal();
-//        sleepLock.unlock();
+        sleepLock.lock();
+        condition.signal();
+        sleepLock.unlock();
     }
 
     public void addMessageReserve(Message message) {

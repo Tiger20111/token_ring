@@ -26,8 +26,8 @@ class StartParams {
 
 public class Application {
     public static void main(String[] args) {
-        int numRuns = 1;
-        int numWarming = 0;
+        int numRuns = 10;
+        int numWarming = 10;
 
         String filePath = "/Users/a17644602/IdeaProjects/token_ring/data/";
 
@@ -56,10 +56,10 @@ public class Application {
     }
     private static ArrayList<StartParams> getStartParams() {
         ArrayList<StartParams> startParams = new ArrayList<>();
-        int start = 0;
-        int n = 1;
+        int start = 6;
+        int n = 100;
         for (int i = start; i < n; i++) {
-            startParams.add(new StartParams(12, 10_000_000, 5));
+            startParams.add(new StartParams(i, 10_000_000, i - 1));
         }
 
         return startParams;
