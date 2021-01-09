@@ -4,10 +4,8 @@ import network.msg.Message;
 import network.msg.MessageBank;
 import network.node.Node;
 import network.node.NodeBank;
-import statistic.ObjectSizeFetcher;
 import statistic.Statistic;
 
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.concurrent.*;
 
@@ -70,7 +68,6 @@ public class TokenRing {
             messages.add(message);
             nodes.get(i % nodes.size()).addMessageReserve(message);
         }
-        System.out.println(ObjectSizeFetcher.getObjectSize(messages));
     }
 
     private void setStartParamsStatistic(int numNodes, int numMessages, int shift) {
