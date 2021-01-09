@@ -26,7 +26,7 @@ class StartParams {
 
 public class Application {
     public static void main(String[] args) {
-        int numRuns = 110;
+        int numRuns = 1;
         int numWarming = 0;
 
         String filePath = "/Users/a17644602/IdeaProjects/token_ring/data/";
