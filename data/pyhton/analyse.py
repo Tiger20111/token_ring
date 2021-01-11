@@ -13,7 +13,7 @@ def throughputOne(df):
   fig = go.Figure(data=[trace1])
 
   fig.update_layout(
-      title="Throughput Chain by epoch time",
+      title="Throughput Ring by epoch time",
       yaxis_title="Throughput by sec",
       xaxis_title="number of epoch"
   )
@@ -38,7 +38,7 @@ def throughputRing(df1):
   fig = go.Figure(data=[trace1])
 
   fig.update_layout(
-      title="Dependency throughput on length ring",
+      title="Dependency throughput ring on length ring",
       yaxis_title="Throughput",
       xaxis_title="Threads"
   )
@@ -63,7 +63,7 @@ def throughputChain(df1):
   fig = go.Figure(data=[trace1])
 
   fig.update_layout(
-      title="Dependency throughput on length ring",
+      title="Dependency throughput chain on length ring",
       yaxis_title="Throughput",
       xaxis_title="Threads"
   )
@@ -141,7 +141,7 @@ def throughputRingDependencyShift(df1):
   fig = go.Figure(data=[trace1])
 
   fig.update_layout(
-      title="Dependency throughput on length ring",
+      title="Dependency throughput ring on length ring",
       yaxis_title="Throughput",
       xaxis_title="Shift"
   )
@@ -166,7 +166,7 @@ def latencyRingDependencyShift(df1):
   fig = go.Figure(data=[trace1])
 
   fig.update_layout(
-      title="Dependency throughput on length ring",
+      title="Dependency throughput on length shift",
       yaxis_title="Latency",
       xaxis_title="Shift"
   )

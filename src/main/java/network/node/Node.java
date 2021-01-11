@@ -19,8 +19,6 @@ public class Node implements Runnable {
     private long workTime;
     private long startTime;
     int id;
-    private final Lock sleepLock = new ReentrantLock();
-    Condition condition = sleepLock.newCondition();
     public Node (int id, int reserveSize, int shift) {
         this.id = id;
         allMessage = reserveSize * (shift);
@@ -63,16 +61,6 @@ public class Node implements Runnable {
 
     public void sendMessageFromReserve() {
         if (reserve.isEmpty()) {
-            try {
-                long stopTime = System.nanoTime();
-                workTime += stopTime - startTime;
-                sleepLock.lock();
-                condition.await();
-                sleepLock.unlock();
-                startTime = System.nanoTime();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             return;
         }
         Message message = reserve.remove(0);
@@ -81,9 +69,6 @@ public class Node implements Runnable {
 
     public void addMessageTransfer(Message message) {
         queue.add(message);
-        sleepLock.lock();
-        condition.signal();
-        sleepLock.unlock();
     }
 
     public void addMessageReserve(Message message) {
